@@ -1,0 +1,359 @@
+:root {
+  --primary: #2563eb;
+  --dark: #0f172a;
+  --secondary: #64748b;
+  --light-bg: #f8fafc;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #ffffff;
+  color: var(--dark);
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 0;
+}
+.navbar-brand {
+  font-size: 1.25rem !important;
+}
+.nav-link {
+  font-weight: 600;
+  color: var(--dark) !important;
+  margin-left: 20px;
+}
+
+/* Hero */
+.hero {
+  padding: 120px 0 80px;
+  background: radial-gradient(circle at top right, #f1f5f9, #ffffff);
+}
+.hero-title {
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+.text-gradient {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sections */
+.section-padding {
+  padding: 80px 0;
+}
+.section-title {
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-size: 2.25rem;
+}
+
+/* Skill Matrix */
+.skill-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 35px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+.skill-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+.tech-pill {
+  display: inline-block;
+  background: #eff6ff;
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 4px;
+}
+
+/* Timeline */
+.timeline-item {
+  border-left: 2px solid #e2e8f0;
+  padding-left: 30px;
+  position: relative;
+  padding-bottom: 50px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+}
+
+/* Project Cards */
+.project-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  background: #fff;
+}
+.impact-badge {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 60px 0;
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    padding: 60px 0 50px;
+  }
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  /* Sections */
+  .section-padding {
+    padding: 50px 0;
+  }
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  /* Cards */
+  .skill-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .project-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  /* Tech Pills */
+  .tech-pill {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    margin: 3px;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  .d-flex.gap-3 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  .d-flex.gap-3 > * {
+    width: 100%;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  .timeline-item::before {
+    left: -11px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0.75rem 0;
+  }
+  .btn-outline-dark.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  /* Lists in Cards */
+  .project-card ul {
+    margin-left: 20px;
+  }
+  .project-card li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+  }
+  footer h2 {
+    font-size: 1.5rem;
+  }
+  footer p {
+    font-size: 0.95rem;
+  }
+  footer a.h4 {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Hero Section */
+  .hero {
+    padding: 40px 0 40px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .text-primary.fw-bold {
+    font-size: 0.9rem;
+  }
+
+  /* Sections */
+  .section-padding {
+    padding: 40px 0;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Cards */
+  .skill-card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  .skill-card h5 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .project-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .project-card h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Tech Pills */
+  .tech-pill {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    margin: 2px;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .btn.btn-sm {
+    font-size: 0.7rem;
+  }
+
+  /* Timeline */
+  .timeline-item {
+    padding-left: 15px;
+    padding-bottom: 25px;
+    border-left: 2px solid #e2e8f0;
+  }
+  .timeline-item::before {
+    left: -10px;
+    width: 12px;
+    height: 12px;
+  }
+  .timeline-item h4 {
+    font-size: 1rem;
+  }
+
+  /* Text sizes */
+  .small {
+    font-size: 0.8rem !important;
+  }
+
+  /* Lists */
+  .project-card ul {
+    margin-left: 15px;
+  }
+  .project-card li {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 0;
+  }
+  footer h2 {
+    font-size: 1.25rem;
+  }
+  footer a.h4 {
+    font-size: 1.1rem !important;
+  }
+  footer p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  .section-title {
+    font-size: 1.25rem;
+  }
+  .skill-card h5 {
+    font-size: 0.95rem;
+  }
+  .project-card h4 {
+    font-size: 1rem;
+  }
+  .tech-pill {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+  footer h2 {
+    font-size: 1.1rem;
+  }
+}
